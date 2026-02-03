@@ -1,6 +1,6 @@
-# XYZ Company Website Project
+# Company Website Project
 
-This repository contains the source code for the "XYZ" company website, developed to convert provided Figma designs into a fully responsive, ready-to-use website.
+This repository contains the source code for the company website, developed to convert provided Figma designs into a fully responsive, ready-to-use website.
 
 ## Project Overview
 
