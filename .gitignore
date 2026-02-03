@@ -1,0 +1,19 @@
+# Ignore everything by default
+*
+
+# Unignore the specific project files (starting from index1.html)
+!index1.html
+!style1.css
+!inner.html
+!submit.html
+!taleemat.html
+!latestnews.html
+!footer-bg-pattern.png
+
+# Images
+!images/
+!images/**
+
+# Git configuration
+!.gitignore
+!README.md

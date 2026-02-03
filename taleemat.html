@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Idreesia — Landing</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+
+    :root {
+      --idreesia-green: #026419;
+      --muted-white: rgba(255,255,255,0.9);
+      --content-max: 820px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ---------------- Top banner (full height image) ---------------- */
+    .top-banner {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------------- green strip under banner (social icons etc) ---------------- */
+    .top-strip {
+      background-color: var(--idreesia-green);
+      color: white;
+      padding: 11px 0;
+      font-size: 0.95rem;
+    }
+
+    .top-strip .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social-icons img {
+      height: 16px;
+      width: auto;
+      display: inline-block;
+    }
+
+    .top-strip .social-icons a {
+      color: white;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .top-strip .social-icons a:hover { opacity: 0.8; }
+
+    /* ---------------- white nav row ---------------- */
+    .nav-row {
+      background: #fff;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-weight: 600;
+    }
+
+    .nav-row .nav-links {
+      display: flex;
+      justify-content: flex-start;
+
+      align-items: center;
+      gap: 1.8rem;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-row .nav-links a {
+      color: var(--idreesia-green);
+      text-decoration: none;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .nav-row .nav-links a:hover {
+      color: #013a15;
+    }
+
+    /* ------------- Responsive Navigation Behavior ------------- */
+    @media (max-width: 992px) {
+      .nav-row .nav-links {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .nav-row .nav-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+      }
+    }
+
+    /* ---------------- hero/banner image (window) ---------------- */
+    .hero {
+      position: relative;
+      min-height: 220px;
+      background-image: url('images/kabaah.jpg');
+      
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*background-color: rgba(2, 100, 25, 0.4);
+      background-blend-mode: multiply;*/
+      margin-bottom: 50px;
+    }
+
+    .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(2, 100, 25, 0.4); /* 40% green overlay */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+    .hero-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: white !important;
+  width: 291px;
+  height: 72px;
+  margin: 0 auto;
+}
+
+
+    .hero-badge {
+      gap: 1.8rem;
+      width: 4%;
+      margin-right: auto;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.12));
+      pointer-events: none;
+    }
+
+    /*main content*/
+     .container-custom {
+          background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            padding: 30px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin-bottom: 30px;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width:100%;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 60px 16px 24px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #026419;
+            box-shadow: 0 0 0 3px rgba(5, 121, 53, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: #999999;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: #026419;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right:8px ;
+        }
+
+        .search-btn:hover {
+            background: #046830;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .search-btn i {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        /* Filter Pills */
+        .filter-container {
+            margin-bottom: 30px;
+        }
+
+        .filter-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            flex-wrap: wrap;
+            
+        }
+
+        .filter-pill {
+          flex: 1 1 auto; 
+           text-align: center;
+            padding: 5px 28px;
+            border: 2px solid #026419;
+            border-radius: 50px;
+            background: #ffffff;
+            color: #026419;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .filter-pill:hover {
+            background: #e8f5e9;
+            color: #026419;
+        }
+
+        .filter-pill.active {
+            background: #026419;
+            color: #ffffff;
+        }
+
+        /* Taleemat Cards */
+        .taleemat-card {
+            background: #FCF8F5;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            
+        }
+
+        .taleemat-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            transform: scale(1.01);
+            background-color: white;
+             .play-btn {
+            background: #046830;
+            transform: scale(1.2);
+        }
+
+        }
+
+        .taleemat-content {
+            flex: 1;
+        }
+
+        .taleemat-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #026419;
+            margin: 0 0 50px 0;
+        }
+
+        .taleemat-meta {
+            font-size: 16px;
+            font-weight: 400;
+            color: #6b6b6b;
+            margin: 0;
+        }
+
+        .play-btn {
+           margin-top: -60px;
+            width: 54px;
+            height: 54px;
+            background: #026419;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .play-btn:hover {
+            background: #046830;
+            transform: scale(1.2);
+        }
+
+        .play-btn i {
+            color: #ffffff;
+            font-size: 40px;
+            margin-left: 3px;
+        }
+
+        /* Pagination */
+        .pagination-container {
+       display: flex;
+    flex-direction: column;   /* Stack text and buttons vertically */
+    align-items: flex-start;  /* Align the "Showing..." text to the left */
+    gap: 10px;                /* Space between text and buttons */
+    margin-top: 40px;
+        }
+
+        .pagination-info {
+            font-size: 15px;
+            color: #2b2b2b;
+            font-weight: 500; 
+        }
+
+        .pagination-controls {
+             display: flex;
+              justify-content: center;  /* Center the buttons horizontally */
+              gap: 8px;
+              width: 100%;        
+              margin-top: -40px !important;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            color: #2b2b2b;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .page-btn:hover {
+            background: #e8f5e9;
+            color: #026419;
+        }
+
+        .page-btn.active {
+            background: #026419;
+            color: #ffffff;
+        }
+
+        .page-btn.arrow {
+            background: #026419;
+            color: #ffffff;
+        }
+
+        .page-btn.arrow:hover {
+            background: #046830;
+        }
+
+        .page-dots {
+            padding: 0 8px;
+            color: #6b6b6b;
+            font-weight: 600;
+        }
+
+        /* Detail View */
+        .detail-view {
+            display: none;
+        }
+
+        .detail-view.active {
+            display: block;
+        }
+
+        .detail-card {
+            background: #FCF8F5;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .detail-header {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .detail-logo-container {
+            flex-shrink: 0;
+               display: flex;
+            justify-content: center !important;
+    align-items: center !important;
+        }
+
+        .detail-logo {
+          border-radius: 50%;
+          border: #026419 15px solid;
+            width: 360px;
+            height: 360px;
+            object-fit: contain;
+            vertical-align: middle !important;
+            align-items: center !important;
+      justify-content: center !important;
+        }
+
+        .detail-info {
+            flex: 1;
+        }
+
+        .detail-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000;
+            margin: 0 0 25px 0;
+            line-height: 1.3;
+        }
+
+        .detail-meta-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: #2b2b2b;
+        }
+
+        .detail-meta-item i {
+            font-size: 18px;
+            color: #026419;
+        }
+
+        .detail-description {
+            font-size: 18px;
+            color: black;
+            margin-bottom: 90px;
+            font-weight: 400px;
+        }
+
+        /* Audio Player */
+        .audio-player-container {
+            background: #f5f5f5;
+            border-radius: 50px;
+            padding: 0px 5px;
+            margin-bottom: 35px;
+            width: 70%;
+        }
+
+        audio {
+            width: 100%;
+            height: 50px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #f5f5f5;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            background: #026419;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3px 45px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-right: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(5, 121, 53, 0.3);
+        }
+
+        .btn-download:hover {
+            background: #046830;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(5, 121, 53, 0.4);
+        }
+
+        .btn-back {
+            background: #ffffff;
+            color: #026419;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3px 45px;
+            border: 2px solid #026419;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+        }
+
+        .btn-back:hover {
+            background: #e8f5e9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .detail-card {
+                padding: 40px;
+            }
+
+            .detail-header {
+                gap: 30px;
+            }
+
+            .detail-logo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .detail-title {
+                font-size: 28px;
+            }
+
+            .taleemat-title {
+                font-size: 17px;
+            }
+
+            .search-input {
+                font-size: 15px;
+                padding: 15px 55px 15px 22px;
+            }
+
+            .filter-pill {
+                padding: 11px 24px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 0;
+            }
+
+            .container-custom {
+                padding: 0 15px;
+            }
+
+            .detail-card {
+                padding: 30px 25px;
+            }
+
+            .detail-header {
+                flex-direction: column;
+                gap: 25px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .detail-logo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .detail-title {
+                font-size: 24px;
+            }
+
+            .detail-meta-row {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .detail-description {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .action-buttons {
+                justify-content: center;
+            }
+
+            .search-input {
+                padding: 14px 50px 14px 20px;
+                font-size: 14px;
+            }
+
+            .search-btn {
+                width: 42px;
+                height: 42px;
+            }
+
+            .filter-pills {
+                gap: 10px;
+            }
+
+            .filter-pill {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+            .taleemat-card {
+                padding: 20px 22px;
+            }
+
+            .taleemat-title {
+                font-size: 16px;
+            }
+
+            .taleemat-meta {
+                font-size: 13px;
+            }
+
+            .play-btn {
+                width: 48px;
+                height: 48px;
+                margin-left: 15px;
+            }
+
+            .play-btn i {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .detail-card {
+                padding: 25px 20px;
+            }
+
+            .detail-logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .detail-title {
+                font-size: 20px;
+            }
+
+            .detail-meta-item {
+                font-size: 14px;
+            }
+
+            .detail-description {
+                font-size: 15px;
+            }
+
+            .btn-download,
+            .btn-back {
+                font-size: 15px;
+                padding: 12px 30px;
+                width: 100%;
+            }
+
+            .search-container {
+                margin-bottom: 25px;
+            }
+
+            .search-input {
+                padding: 13px 48px 13px 18px;
+                font-size: 14px;
+            }
+
+            .search-btn {
+                width: 38px;
+                height: 38px;
+            }
+
+            .search-btn i {
+                font-size: 18px;
+            }
+
+            .filter-container {
+                margin-bottom: 25px;
+            }
+
+            .filter-pills {
+                gap: 8px;
+                justify-content: flex-start;
+            }
+
+            .filter-pill {
+                padding: 9px 18px;
+                font-size: 13px;
+            }
+
+            .taleemat-card {
+                padding: 18px 18px;
+                margin-bottom: 12px;
+            }
+
+            .taleemat-title {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+
+            .taleemat-meta {
+                font-size: 12px;
+            }
+
+            .play-btn {
+                width: 44px;
+                height: 44px;
+                margin-left: 12px;
+            }
+
+            .play-btn i {
+                font-size: 16px;
+            }
+
+            .pagination-container {
+                gap: 15px;
+                margin-top: 30px;
+            }
+
+            .pagination-info {
+                font-size: 13px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .page-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+            }
+        }
+
+      /*footer*/
+      .idreesia-footer{
+        margin-top: 50px !important;
+  --idreesia-green: #026419;    /* your Figma color */
+  --text-white: #ffffff;
+  --muted-white: rgba(255,255,255,0.85);
+  box-sizing:border-box;
+  margin:0;font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  color: var(--text-white);
+
+  /* pattern + base color */
+  background-image: url('footer-bg-pattern.png');
+  background-repeat: repeat;
+  background-size: auto; /* preserve the pattern tiling */
+  background-color: var(--idreesia-green);
+
+  /* blending makes the color tint the pattern while keeping it visible */
+  background-blend-mode: multiply; /* multiply or overlay — try both to match Figma */
+  overflow: hidden;
+}
+
+/* content sits above backgrounds */
+.footer-inner{
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Right-side faint logo watermark ---------- */
+/* large light logo subtly visible on the right behind the content */
+.idreesia-footer::after{
+  content: "";
+  position: absolute;
+  right: -6%;              /* push slightly off-canvas for same look as screenshot */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;            /* tune size to match Figma */
+  height: 420px;
+  background-image: url('images/logo.png'); /* large light logo PNG */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.15;           /* very faint */
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(0);         /* optional: soften further if desired */
+}
+
+/* ---------- Left logo ---------- */
+.footer-logo{
+  max-width: 180px;
+  height: auto;
+}
+
+/* ---------- Typography ---------- */
+.footer-title{
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: var(--text-white);
+}
+
+.footer-text{
+  color: var(--muted-white);
+  font-size: 0.94rem;
+  line-height: 1.9;
+  text-decoration: underline;
+}
+
+/* links */
+.footer-links a{
+  color: var(--text-white);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: .4rem;
+  transition: color .18s ease;
+}
+.footer-links a:hover{ color: #c7f0cf; }
+
+/* social icons */
+.social-icons a{
+  color: var(--text-white);
+  font-size: 0.8rem;
+  margin-right: 0.35rem;
+  text-decoration: none;
+  display:inline-block;
+  transition: transform .15s ease, color .15s ease;
+}
+.social-icons a:hover{ color: #c7f0cf; transform: translateY(-2px); }
+
+/* bottom bar */
+.footer-bottom{
+  /*
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient( rgba(0,0,0,0.00), rgba(0,0,0,0.03) );
+  z-index: 2;
+  position: relative;
+  color: var(--muted-white);
+  font-size: 0.95rem;
+  */
+  
+}
+.algn{
+  border-top:1px solid white;
+  padding-top: 10px;
+  text-align: left;
+}
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 992px){
+  .idreesia-footer::after{
+    right: -14%;
+    width: 420px;
+    height: 420px;
+    opacity: 0.06;
+  }
+  .footer-logo{ max-width:150px; }
+}
+
+@media (max-width: 768px){
+  .idreesia-footer{
+    background-size: cover; /* keep pattern reasonable on very small screens */
+  }
+  .idreesia-footer::after{
+    display: none; /* hide large watermark on small screens */
+  }
+  .footer-logo{ max-width:130px; margin-bottom: .5rem; }
+  .footer-inner .row { text-align: center; }
+  .footer-inner .col-md-4, .footer-inner .col-md-3 { margin:auto; }
+  .footer-text, .footer-links a { font-size: 0.92rem; }
+  .social-icons a { font-size: 1.15rem; margin-right: .5rem; }
+}
+@media(max-width: 576px) {
+  .algn{
+  border-top:1px solid white;
+  padding-top: 10px;
+  text-align: center;
+}
+}
+@media (max-width: 480px){
+  .footer-title { font-size: 1rem; }
+  .footer-text { font-size: 0.88rem; }
+  /*.footer-bottom { font-size: 0.85rem; padding: 10px 0; }*/
+  .algn{
+  border-top:1px solid white;
+  padding-top: 10px;
+  text-align: center;
+}
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== TOP BANNER (full height image) ========== -->
+  <header>
+    <div class="top-banner" role="img" aria-label="Top decorative banner">
+      <img src="images/banner-seal.png" alt="Top Banner" class="banner-img">
+    </div>
+
+    <!-- green strip with icons -->
+    <div class="top-strip">
+      <div class="container d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Left side: Urdu + icons -->
+        <div class="social-icons">
+          <img src="images/urdu.png" alt="Urdu">
+          <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+          <a href="#"><img src="images/playstore.png" alt="Play Store"></a>
+          <a href="#"><img src="images/app.png" alt="App"></a>
+          <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main navigation -->
+    <div class="nav-row">
+      <div class="container">
+        <nav class="nav-links" aria-label="Main navigation">
+           <img src="images/logo.png" class="hero-badge" alt="Idreesia Badge" onclick="window.location.href='inner.html'" style="cursor: pointer;">
+          <a href="latestnews.html">Latest Messages</a>
+          <a href="#">Mehfils</a>
+          <a href="taleemat.html">Taleemat</a>
+          <a href="#">Naat Shareef</a>
+          <a href="#">Wazaif</a>
+          <a href="#">Mahafil Address</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+ <!-- HERO SECTION -->
+<section class="hero" role="img" aria-label="Hero background image">
+  <div class="container text-center text-white">
+    <h1 class="hero-heading">Taleemat</h1>
+  </div>
+</section>
+
+<div class="container-custom">
+    <!-- List View -->
+    <div id="listView">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Search in English or Urdu">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="filter-container">
+            <div class="filter-pills">
+                <a href="#" class="filter-pill active">All Taleemat</a>
+                <a href="#" class="filter-pill">Basic Taleemat</a>
+                <a href="#" class="filter-pill">Quran Recitation</a>
+                <a href="#" class="filter-pill">Dua Mubarak</a>
+                <a href="#" class="filter-pill">Azan</a>
+            </div>
+            <div class="filter-pills mt-2">
+                <a href="#" class="filter-pill">New/Daily Taleem</a>
+                <a href="#" class="filter-pill">Karkunan Taleemat</a>
+                <a href="#" class="filter-pill">Ehad Karkunan Taleemat</a>
+                <a href="#" class="filter-pill">Short Taleemat</a>
+            </div>
+        </div>
+
+        <!-- Taleemat List -->
+        <div class="taleemat-list">
+            <div class="taleemat-card" onclick="showDetail()">
+                <div class="taleemat-content">
+                    <h3 class="taleemat-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h3>
+                    <p class="taleemat-meta">ST-257 - Short Taleemat</p>
+                </div>
+                <button class="play-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+            </div>
+
+            <div class="taleemat-card" onclick="showDetail()">
+                <div class="taleemat-content">
+                    <h3 class="taleemat-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h3>
+                    <p class="taleemat-meta">ST-257 - Short Taleemat</p>
+                </div>
+                <button class="play-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+            </div>
+
+            <div class="taleemat-card" onclick="showDetail()">
+                <div class="taleemat-content">
+                    <h3 class="taleemat-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h3>
+                    <p class="taleemat-meta">ST-257 - Short Taleemat</p>
+                </div>
+                <button class="play-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+            </div>
+
+            <div class="taleemat-card" onclick="showDetail()">
+                <div class="taleemat-content">
+                    <h3 class="taleemat-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h3>
+                    <p class="taleemat-meta">ST-257 - Short Taleemat</p>
+                </div>
+                <button class="play-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+            </div>
+
+            <div class="taleemat-card" onclick="showDetail()">
+                <div class="taleemat-content">
+                    <h3 class="taleemat-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h3>
+                    <p class="taleemat-meta">ST-257 - Short Taleemat</p>
+                </div>
+                <button class="play-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+            </div>
+
+            <div class="taleemat-card" onclick="showDetail()">
+                <div class="taleemat-content">
+                    <h3 class="taleemat-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h3>
+                    <p class="taleemat-meta">ST-257 - Short Taleemat</p>
+                </div>
+                <button class="play-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <div class="pagination-info">Showing 1 to 6 of 2152</div>
+            <div class="pagination-controls">
+                <button class="page-btn arrow">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn">6</button>
+                <span class="page-dots page-btn">. . .</span>
+                <button class="page-btn">42</button>
+                <button class="page-btn arrow">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail View -->
+    <div id="detailView" class="detail-view">
+        <div class="detail-card">
+            <div class="detail-header">
+                <div class="detail-logo-container">
+                    <img src="images/logo.png" alt="Silsila Muhammadia Ameenia Logo" class="detail-logo">
+                </div>
+                <div class="detail-info">
+                    <h1 class="detail-title">Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat</h1>
+                    
+                    <div class="detail-meta-row">
+                        <div class="detail-meta-item">
+                            <i class="bi bi-calendar3"></i>
+                            <span>14 Nov 2010</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <i class="bi bi-mic"></i>
+                            <span>ST-257</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <i class="bi bi-collection-play"></i>
+                            <span>Short Taleemat</span>
+                        </div>
+                    </div>
+
+                    <div class="audio-player-container">
+                        <audio controls>
+                            <source src="audio/sample.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+
+                    <p class="detail-description">
+                        Zil Hajj Kay Rozon Ki Ahmiyat, Nafil Rozon Ki Raghbat
+                    </p>
+
+                    <div class="action-buttons">
+                        <button class="btn-download">
+                            Download Now
+                        </button>
+                        <button class="btn-back" onclick="showList()">
+                            Back To Taleemat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showDetail() {
+        document.getElementById('listView').style.display = 'none';
+        document.getElementById('detailView').classList.add('active');
+        window.scrollTo(0, 0);
+    }
+
+    function showList() {
+        document.getElementById('listView').style.display = 'block';
+        document.getElementById('detailView').classList.remove('active');
+        window.scrollTo(0, 0);
+    }
+</script>
+
+
+     <!-- FOOTER -->
+  <footer class="idreesia-footer">
+    <div class="footer-inner container py-5">
+
+      <div class="row g-4 align-items-start text-white">
+
+        <!-- Left logo -->
+        <div class="col-lg-3 col-md-4 col-12 text-center text-md-start">
+          <img src="images/logo.png" alt="Idreesia Logo" class="footer-logo img-fluid">
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+          <h5 class="footer-title">Contact</h5>
+          <p class="footer-text mb-1">061-111-111-381</p>
+          <p class="footer-text mb-0">
+            381-A Block Shah Rukn-e-Alam<br>
+            Colony, Near Thana Stop,<br>
+            Multan, Pakistan
+          </p>
+        </div>
+
+        <!-- Learn More -->
+         <div class="col-lg-6 col-md-4 col-sm-6 col-12">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <h5 class="footer-title">Learn More</h5>
+          <ul class="list-unstyled footer-links mb-0">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Media Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <h5 class="footer-title">Social Media</h5>
+          <div class="social-icons">
+            <a aria-label="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
+            <a aria-label="messenger" href="#"><i class="fab fa-facebook-messenger"></i></a>
+            <a aria-label="play" href="#"><i class="fab fa-google-play"></i></a>
+            <a aria-label="apple" href="#"><i class="fab fa-apple"></i></a>
+            <a aria-label="youtube" href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        </div>
+
+      </div> <!-- /.row -->
+    </div> <!-- /.footer-inner -->
+
+
+
+    <!-- bottom copyright -->
+    <div class="footer-bottom text-center py-3">
+      <div class="container algn">
+        <span>© 2025 Silsila Muhammadia Ameenia Idreesia All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

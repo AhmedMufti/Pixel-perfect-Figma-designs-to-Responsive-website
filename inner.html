@@ -1,0 +1,1630 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Idreesia — Landing</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+.fade-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+    :root {
+      --idreesia-green: #026419;
+      --muted-white: rgba(255,255,255,0.9);
+      --content-max: 820px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ---------------- Top banner (full height image) ---------------- */
+    .top-banner {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------------- green strip under banner (social icons etc) ---------------- */
+    .top-strip {
+      background-color: var(--idreesia-green);
+      color: white;
+      padding: 11px 0;
+      font-size: 0.95rem;
+    }
+
+    .top-strip .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social-icons img {
+      height: 16px;
+      width: auto;
+      display: inline-block;
+    }
+
+    .top-strip .social-icons a {
+      color: white;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .top-strip .social-icons a:hover { opacity: 0.8; }
+
+    /* ---------------- white nav row ---------------- */
+    .nav-row {
+      background: #fff;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-weight: 600;
+    }
+
+    .nav-row .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1.8rem;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-row .nav-links a {
+      color: var(--idreesia-green);
+      text-decoration: none;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .nav-row .nav-links a:hover {
+      color: #013a15;
+    }
+
+    /* ------------- Responsive Navigation Behavior ------------- */
+    @media (max-width: 992px) {
+      .nav-row .nav-links {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .nav-row .nav-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+      }
+    }
+
+    /* ---------------- hero/banner image (window) ---------------- */
+    .hero {
+      position: relative;
+      min-height: 620px;
+      background-image: url('images/hero-badge.jpg');
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 28px;
+      top: 28px;
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+       z-index: 3;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.12));
+      pointer-events: none;
+    }
+
+    /* ---------------- content area ---------------- */
+    .content {
+      max-width: var(--content-max);
+      margin: 4.25rem auto 4.25rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      color: var(--idreesia-green);
+      font-size: 1.8rem;
+      margin-bottom: 0.65rem;
+      font-weight: 700;
+    }
+
+    .content p {
+      color: #2b2b2b;
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0 auto 1.8rem;
+    }
+
+    .ornament {
+      width: 60%;
+      opacity: 0.95;
+      display: block;
+      margin: 0.6rem auto 0;
+      margin-top: 60px;
+    }
+
+    
+
+    /* ---------------- responsive tweaks ---------------- */
+    @media (max-width: 768px) {
+      .hero { min-height: 260px; }
+      .content { margin-top: 1.8rem; padding: 0 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .content h2 { font-size: 1.4rem; }
+      .content p { font-size: 0.95rem; }
+      .ornament { width: 120px; }
+    }
+
+    .container-narrow { max-width: var(--content-max); margin: 0 auto; }
+    /*--------------------------submit parhaiyan--------------------------*/ 
+    :root {
+      --idreesia-green: #026419;
+      --text-white: #ffffff;
+      --muted-white: rgba(255, 255, 255, 0.85);
+    }
+
+    /*
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f4f4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0px;
+    }
+*/
+    .announcement-box {
+      background-color: var(--idreesia-green);
+      background-image: url('footer-bg-pattern.png'); /* Replace with correct path */
+      background-repeat: repeat;
+      background-size: auto;
+      background-blend-mode: multiply;
+      border: none;
+      border-radius: 15px;
+      padding: 40px 40px;
+      color: var(--text-white);
+      width: 100%;
+      max-width: 95%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .announcement-box h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .announcement-box p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      font-weight: 400;
+      color: var(--muted-white);
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      background-color: #ffffff;
+      color: var(--idreesia-green);
+      font-weight: 600;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #c7f0cf;
+      color: #024314;
+    }
+
+    @media (max-width: 768px) {
+      .announcement-box {
+        padding: 35px 25px;
+      }
+
+      .announcement-box h1 {
+        font-size: 1.5rem;
+      }
+
+      .announcement-box p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .announcement-box {
+        padding: 25px 20px;
+      }
+
+      .announcement-box h1 {
+        font-size: 1.3rem;
+      }
+
+      .announcement-box p {
+        font-size: 0.95rem;
+      }
+    }
+
+     :root {
+      --idreesia-green: #026419;
+      --white: #ffffff;
+    }
+/*
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px 0;
+    }
+*/
+    .slider-container-fluid {
+      width: 93%;
+      margin: 0 auto;
+    }
+
+    .cards-viewport {
+      overflow: hidden;
+      border-radius: 10px;
+      padding: 18px 8px;
+    }
+
+    .cards-wrapper {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.5s ease;
+      will-change: transform;
+      align-items: stretch;
+    }
+
+    .calligraphy-card {
+      flex: 0 0 calc(33.333% - 16px);
+      border-radius: 16px;
+      padding: 48px 18px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-image: url('images/bg-pattern.png');
+      background-repeat: repeat;
+      background-size: auto;
+      background-color: var(--idreesia-green);
+      background-blend-mode: multiply;
+      color: var(--white);
+      aspect-ratio: 1.25 / 1;
+    }
+
+    .calligraphy-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .calligraphy-image {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calligraphy-image img {
+      width: 95%;
+      
+      object-fit: contain;
+    }
+
+    .card-divider {
+      width: 75%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.18);
+      margin: 8px 0 12px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .arrows-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 22px;
+    }
+
+    .nav-arrow {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      background: var(--idreesia-green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+      padding: 0; /* Ensures SVG is centered */
+    }
+
+    .nav-arrow:hover {
+      transform: scale(1.08);
+      background: #014f1a;
+    }
+    
+    .nav-arrow svg {
+      width: 50%; /* Control icon size relative to button */
+      height: 50%;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    @media (max-width: 992px) {
+      .calligraphy-card {
+        flex: 0 0 calc(50% - 12px);
+        aspect-ratio: 1.25 / 1;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .calligraphy-card {
+        flex: 0 0 100%;
+        aspect-ratio: 1.25 / 1;
+      }
+
+      .cards-wrapper {
+        gap: 16px;
+      }
+
+      .nav-arrow {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    /*phonemockup*/
+    .boss-mockup {
+      height: 375px;
+      overflow: hidden;
+      position: relative;
+
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      overflow-x: hidden;
+      background: #f5f5f5;
+    }
+
+
+    .hero-section-mockup {
+      position: relative;
+      height: 575px;
+      overflow: hidden;
+      background-image: 
+        url('images/bg-pattern.png'), 
+        linear-gradient(
+          to bottom,
+          white 0%,
+          white 20%,
+          #026419 20%,
+          #026419 65%,
+          white 65%,
+          white 100%
+        );
+      background-repeat: repeat-x, no-repeat;
+      background-position: center 115px, center center;
+      background-size: auto 258.75px, auto;
+      background-blend-mode: multiply;
+    }
+
+    .container-custom-mockup {
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 100%;
+      position: relative;
+      padding: 0 40px;
+    }
+
+    .content-row-mockup {
+      display: flex;
+      align-items: top;
+      justify-content: space-between;
+      height: 100%;
+      position: relative;
+    }
+
+    .left-content-mockup {
+      flex: 0 0 45%;
+      z-index: 10;
+      padding-top: 8%;
+    }
+
+    .brand-title-mockup {
+      padding-top: 55px;
+      font-size: 72px;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 10px;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .brand-subtitle-mockup {
+      font-size: 24px;
+      color: #ffffff;
+      line-height: 1.5;
+      margin-bottom: 35px;
+      font-weight: 300;
+    }
+
+    .social-media-section-mockup {
+      margin-top: 20px;
+    }
+
+    .social-icons-row-mockup {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .social-icons-row-mockup img {
+      height: 22px;
+      width: auto;
+      display: inline-block;
+    }
+
+    .social-icons-row-mockup a {
+      color: white;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .social-icons-row-mockup a:hover {
+      opacity: 0.8;
+    }
+
+    .right-content-mockup {
+      flex: 0 0 55%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      padding-bottom: 0;
+    }
+
+    .phones-showcase-mockup {
+      display: flex;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      transform: scale(0.67);
+      transform-origin: center top;
+      bottom: -8%;
+    }
+
+    .phone-mockup-mockup {
+      position: absolute;
+      bottom: -15%;
+      height: 115%;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .phone-mockup-mockup img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      object-position: top center;
+      filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
+    }
+
+    .phone-left-mockup {
+      left: 8%;
+      transform: rotate(-15deg);
+      transform-origin: top center;
+      z-index: 1;
+    }
+
+    .phone-center-mockup {
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      bottom: -8%;
+    }
+
+    .phone-right-mockup {
+      right: 8%;
+      transform: rotate(15deg);
+      transform-origin: top center;
+      z-index: 2;
+    }
+
+    @media (max-width: 2134px) {
+      .brand-title-mockup {
+        font-size: 54px;
+      }
+
+      .brand-subtitle-mockup {
+        font-size: 20px;
+      }
+
+      .phone-left-mockup {
+        left: -25%;
+      }
+
+      .phone-right-mockup {
+        right: -25%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .boss-mockup {
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .container-custom-mockup {
+        padding: 0 20px;
+      }
+
+      .content-row-mockup {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .left-content-mockup {
+        flex: 0 0 auto;
+        padding-top: 40px;
+        text-align: center;
+        order: 2;
+      }
+
+      .right-content-mockup {
+        flex: 0 0 auto;
+        height: auto;
+        order: 1;
+        padding-bottom: 20px;
+      }
+
+      .phones-showcase-mockup {
+        height: 400px;
+        min-height: 400px;
+        padding-bottom: 0px;
+        margin-bottom: -100px;
+      }
+
+      .brand-title-mockup {
+        padding-top: 0px;
+        font-size: 48px;
+      }
+
+      .brand-subtitle-mockup {
+        font-size: 18px;
+      }
+
+      .social-icons-row-mockup {
+        justify-content: center;
+      }
+
+      .phone-left-mockup {
+        left: 5%;
+      }
+
+      .phone-right-mockup {
+        right: 5%;
+      }
+
+      .hero-section-mockup {
+        background-color: #026419;
+        background-image: url('images/bg-pattern.png');
+        background-blend-mode: multiply;
+        background-repeat: repeat;
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .boss-mockup {
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-section-mockup {
+        background-color: #026419;
+        background-image: url('images/bg-pattern.png');
+        background-blend-mode: multiply;
+        background-repeat: repeat;
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .container-custom-mockup {
+        padding: 0 15px;
+      }
+
+      .brand-title-mockup {
+        font-size: 40px;
+      }
+
+      .brand-subtitle-mockup {
+        font-size: 16px;
+      }
+
+      .phones-showcase-mockup {
+        height: 400px;
+        min-height: 400px;
+        padding-bottom: 0px;
+        margin-bottom: -100px;
+      }
+
+      .phone-left-mockup {
+        left: 0%;
+      }
+
+      .phone-right-mockup {
+        right: 0%;
+      }
+
+      .phone-mockup-mockup {
+        bottom: -20%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .boss-mockup {
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .brand-title-mockup {
+        font-size: 32px;
+      }
+
+      .brand-subtitle-mockup {
+        font-size: 14px;
+      }
+
+      .phones-showcase-mockup {
+        height: 400px;
+        min-height: 400px;
+        padding-bottom: 0px;
+        margin-bottom: -100px;
+      }
+
+      .phone-left-mockup {
+        left: -5%;
+      }
+
+      .phone-right-mockup {
+        right: -5%;
+      }
+
+      .hero-section-mockup {
+        background-color: #026419;
+        background-image: url('images/bg-pattern.png');
+        background-blend-mode: multiply;
+        background-repeat: repeat;
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+    /*latest-message*/
+    .latest-message-section {
+            --idreesia-green: #026419;
+            --text-gray: black;
+            --border-light: #bbbbbb;
+            --body-bg: #ffffff;
+            --font-family: 'Poppins', sans-serif;
+            padding: 4rem 0;
+            font-family: var(--font-family);
+            background-color: var(--body-bg);
+        }
+
+        .section-title-latest-message {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 650;
+            color: var(--idreesia-green);
+            margin-bottom: 2.5rem;
+        }
+
+        .message-grid-latest-message {
+            width: 100%;
+        }
+
+        .message-grid-latest-message .col-lg-6 {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        /* --- Left Column Styling --- */
+        .left-image-container-latest-message {
+            height: 100%;
+        }
+        
+        .main-image-latest-message {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        /* --- Right Column Styling (Corrected) --- */
+        .right-content-wrapper-latest-message {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .right-content-wrapper-latest-message img {
+            width: 100%;
+            height: 47%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .news-list-latest-message {
+            padding: 0 0.5rem;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        
+        .news-item-latest-message {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .news-item-latest-message + .news-item-latest-message {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .news-title-latest-message {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--idreesia-green);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .news-date-latest-message {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-top: 0.25rem;
+            margin-bottom: 0;
+        }
+
+        /* --- Button Styling --- */
+        .btn-check-news-latest-message {
+            background-color: var(--idreesia-green);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 6px 52px;
+            font-size: 1rem;
+            font-weight: 550;
+            margin-top: -5.5rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-check-news-latest-message:hover {
+            background-color: #014f1a;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        /* --- Responsive Design --- */
+        @media (max-width: 991.98px) {
+            .left-image-container-latest-message {
+                margin-bottom: 1.5rem;
+            }
+            .right-content-wrapper-latest-message {
+                height: auto !important;
+            }
+            .btn-check-news-latest-message {
+                margin-top: 2rem;
+            }
+            .right-content-wrapper-latest-message {
+                margin-top: -9rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .section-title-latest-message {
+                font-size: 1.75rem;
+            }
+            .btn-check-news-latest-message {
+                margin-top: 2rem;
+            }
+             .right-content-wrapper-latest-message {
+                margin-top: -7rem;
+            }
+        }
+
+         .directory-section {
+           --idreesia-green: #026419;
+            --text-dark: #212529;
+            --body-bg: #ffffff;
+            --font-family: 'Poppins', sans-serif;
+            font-family: var(--font-family);
+            background-color: var(--body-bg);
+            padding: 5rem 0;
+            background-color: var(--body-bg);
+        }
+
+        .directory-content {
+            /* This will handle alignment on mobile */
+            text-align: center;
+            margin-left: 40px;
+        }
+        
+        .directory-heading {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--idreesia-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .directory-description {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            max-width: 500px; /* Constrains line width for readability */
+            margin-left: auto; /* Used for centering the block on mobile */
+            margin-right: auto; /* Used for centering the block on mobile */
+            margin-bottom: 2rem;
+        }
+
+        .btn-connect {
+            background-color: var(--idreesia-green);
+            color: #fff;
+            border: none;
+            border-radius: 50px; /* Pill shape */
+            padding: 7px 36px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-connect:hover {
+            background-color: #014f1a; /* Darker green on hover */
+            transform: translateY(-2px);
+        }
+
+        .directory-image {
+          margin-top: -210px;
+            width: 101.5%;
+            /* Ensures the image fills the column without distortion */
+            object-fit: cover;
+        }
+        .hgh{
+          margin-left: 0px;
+      
+              height: 450px !important;
+              overflow: hidden; /* to make sure content doesn't expand the height */
+        }
+      
+        
+        /* --- Responsive Design Adjustments --- */
+        @media screen and (min-width: 1306px) {
+          
+           .directory-image {
+          margin-top: -310px;
+            width: 101.5%;
+            /* Ensures the image fills the column without distortion */
+            object-fit: cover;
+        }
+        }
+          @media screen and (min-width: 1490px) {
+          
+           .directory-image {
+          margin-top: -410px;
+            width: 101.5%;
+            /* Ensures the image fills the column without distortion */
+            object-fit: cover;
+        }
+        }
+         @media screen and (min-width: 1710px) {
+          
+           .directory-image {
+          margin-top: -490px;
+            width: 101.5%;
+            /* Ensures the image fills the column without distortion */
+            object-fit: cover;
+        }
+        }
+          @media screen and (min-width: 1886px) {
+          
+           .directory-image {
+          margin-top: -550px;
+            width: 101.5%;
+            /* Ensures the image fills the column without distortion */
+            object-fit: cover;
+        }
+        }
+       @media screen and (max-width: 991px) {
+        .directory-content{
+          height: fit-content;
+          
+        }
+        .directory-section{
+           height: fit-content !important; 
+           margin-left: 25px !important; /* Used for centering the block on mobile */
+            margin-right: 25px !important;
+          
+        }
+           .hgh{
+            display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;
+            height: 600px !important;             /* allow natural height */
+  width: 100%;
+  padding: 1rem 0; 
+          
+          
+       }
+       .directory-image{
+        height: 100%;
+      
+       }
+       .directory-content {
+            /* This will handle alignment on mobile */
+            display: flex;
+            flex-direction: column;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;
+  height: auto;
+   margin-left: auto; /* Used for centering the block on mobile */
+            margin-right: auto;
+        }
+/*
+         @media screen and (max-width: 787px) {
+          .directory-image{
+        margin-top: -350px;
+       }
+
+           }
+
+            @media screen and (max-width: 665px) {
+          .directory-image{
+        margin-top: -250px;
+       }
+
+           }
+*/
+      }
+
+      /*footer*/
+      .idreesia-footer{
+  --idreesia-green: #026419;    /* your Figma color */
+  --text-white: #ffffff;
+  --muted-white: rgba(255,255,255,0.85);
+  box-sizing:border-box;
+  margin:0;font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  color: var(--text-white);
+
+  /* pattern + base color */
+  background-image: url('footer-bg-pattern.png');
+  background-repeat: repeat;
+  background-size: auto; /* preserve the pattern tiling */
+  background-color: var(--idreesia-green);
+
+  /* blending makes the color tint the pattern while keeping it visible */
+  background-blend-mode: multiply; /* multiply or overlay — try both to match Figma */
+  overflow: hidden;
+}
+
+/* content sits above backgrounds */
+.footer-inner{
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Right-side faint logo watermark ---------- */
+/* large light logo subtly visible on the right behind the content */
+.idreesia-footer::after{
+  content: "";
+  position: absolute;
+  right: -6%;              /* push slightly off-canvas for same look as screenshot */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;            /* tune size to match Figma */
+  height: 420px;
+  background-image: url('images/logo.png'); /* large light logo PNG */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.15;           /* very faint */
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(0);         /* optional: soften further if desired */
+}
+
+/* ---------- Left logo ---------- */
+.footer-logo{
+  max-width: 180px;
+  height: auto;
+}
+
+/* ---------- Typography ---------- */
+.footer-title{
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: var(--text-white);
+}
+
+.footer-text{
+  color: var(--muted-white);
+  font-size: 0.94rem;
+  line-height: 1.9;
+  text-decoration: underline;
+}
+
+/* links */
+.footer-links a{
+  color: var(--text-white);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: .4rem;
+  transition: color .18s ease;
+}
+.footer-links a:hover{ color: #c7f0cf; }
+
+/* social icons */
+.social-icons a{
+  color: var(--text-white);
+  font-size: 0.8rem;
+  margin-right: 0.35rem;
+  text-decoration: none;
+  display:inline-block;
+  transition: transform .15s ease, color .15s ease;
+}
+.social-icons a:hover{ color: #c7f0cf; transform: translateY(-2px); }
+
+/* bottom bar */
+.footer-bottom{
+  /*
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient( rgba(0,0,0,0.00), rgba(0,0,0,0.03) );
+  z-index: 2;
+  position: relative;
+  color: var(--muted-white);
+  font-size: 0.95rem;
+  */
+  
+}
+.algn{
+  border-top:1px solid white;
+  padding-top: 10px;
+  text-align: left;
+}
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 992px){
+  .idreesia-footer::after{
+    right: -14%;
+    width: 420px;
+    height: 420px;
+    opacity: 0.06;
+  }
+  .footer-logo{ max-width:150px; }
+}
+
+@media (max-width: 768px){
+  .idreesia-footer{
+    background-size: cover; /* keep pattern reasonable on very small screens */
+  }
+  .idreesia-footer::after{
+    display: none; /* hide large watermark on small screens */
+  }
+  .footer-logo{ max-width:130px; margin-bottom: .5rem; }
+  .footer-inner .row { text-align: center; }
+  .footer-inner .col-md-4, .footer-inner .col-md-3 { margin:auto; }
+  .footer-text, .footer-links a { font-size: 0.92rem; }
+  .social-icons a { font-size: 1.15rem; margin-right: .5rem; }
+}
+@media(max-width: 576px) {
+  .algn{
+  border-top:1px solid white;
+  padding-top: 10px;
+  text-align: center;
+}
+}
+@media (max-width: 480px){
+  .footer-title { font-size: 1rem; }
+  .footer-text { font-size: 0.88rem; }
+  /*.footer-bottom { font-size: 0.85rem; padding: 10px 0; }*/
+  .algn{
+  border-top:1px solid white;
+  padding-top: 10px;
+  text-align: center;
+}
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== TOP BANNER (full height image) ========== -->
+  <header>
+    <div class="top-banner" role="img" aria-label="Top decorative banner">
+      <img src="images/banner-seal.png" alt="Top Banner" class="banner-img">
+    </div>
+
+    <!-- green strip with icons -->
+    <div class="top-strip">
+      <div class="container d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Left side: Urdu + icons -->
+        <div class="social-icons">
+          <img src="images/urdu.png" alt="Urdu">
+          <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+          <a href="#"><img src="images/playstore.png" alt="Play Store"></a>
+          <a href="#"><img src="images/app.png" alt="App"></a>
+          <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main navigation -->
+    <div class="nav-row">
+      <div class="container">
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="latestnews.html">Latest Messages</a>
+          <a href="#">Mehfils</a>
+          <a href="taleemat.html">Taleemat</a>
+          <a href="#">Naat Shareef</a>
+          <a href="#">Wazaif</a>
+          <a href="#">Mahafil Address</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" role="img" aria-label="Hero background image">
+    <img src="images/logo.png" class="hero-badge" alt="Idreesia Badge">
+    <div class="fade-layer"></div>
+  </section>
+
+  <!-- ========== CONTENT SECTION ========== -->
+  <section class="content" id="journey">
+    <h2>How The Idreesia Journey Began</h2>
+    <p>
+      Silsila Muhammadia Ameenia Idreesia began in Pakistan when Al-Mohtaram Al-Mukarram Al-Sayyedi Al-Hafiz Al-Shaikh Muhammad Amin bin Abdur Rahman arrived in Pakistan from Madinah Munawwarah. The primary purpose of this spiritual path is to guide people toward obedience to Allah Almighty and the Prophet ﷺ, instilling in their hearts the love and greatness of Allah Almighty and the Prophet ﷺ. To achieve these goals, reading Durood Shareef, Zikr, and wazaif are given. Additionally, the invaluable treasure of Allah Almighty’s and the Prophet’s ﷺ teachings is preserved in the form of recordings by Mohtaram Shaikh Sahab as a guidance for all until the day of judgement.
+    </p>
+    <img src="images/ornament.png" class="ornament" alt="Ornamental divider">
+  </section>
+
+  
+
+    <div class="container-fluid px-4">
+    <div class="announcement-box mx-auto">
+      <h1>Multan Shareef Aamad (3 July) ki Parhaiyan</h1>
+      <p>
+        Assalamualaikum warahmatullahi wabarakatuhu, The brothers have conferred and decided that,
+        in celebration of Mohtaram Shaikh Sahab’s arrival in Multan Shareef on 3rd July, all brothers
+        should give charity and participate in reading the wazaif listed below with the intention of
+        expressing gratitude. The amount read should be submitted to Multan Shareef by Asr prayer on
+        Thursday, 3rd July. JazakAllah.
+      </p>
+<button class="submit-btn" onclick="window.location.href='submit.html'">Submit Parhaiyan</button>
+    </div>
+  </div>
+
+  <!-- ========== CONTENT SECTION ========== -->
+  <section class="content" id="journey">
+    <h2>Discover the Spiritual Treasures of Idreesia</h2>
+    <p>
+    Immerse yourself in the sacred atmosphere of Idreesia, where Mehfils illuminate hearts, Taleemat offer timeless guidance, Naats echo with love for the Prophet ﷺ, and Wazaif provide spiritual solace. Whether you're seeking deeper understanding or divine connection, Idreesia.com is your gateway to authentic spiritual nourishment.
+    </p>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div class="slider-container-fluid">
+    <div class="cards-viewport">
+      <div class="cards-wrapper" id="cardsWrapper">
+        <div class="calligraphy-card">
+          <div class="calligraphy-image">
+            <img src="images/calligraphy1.png" alt="Mehfils">
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-title">MEHFILS</div>
+        </div>
+
+        <div class="calligraphy-card">
+          <div class="calligraphy-image">
+            <img src="images/calligraphy2.png" alt="Taleemat">
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-title">TALEEMAT</div>
+        </div>
+
+        <div class="calligraphy-card">
+          <div class="calligraphy-image">
+            <img src="images/calligraphy3.png" alt="Naat Shareef">
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-title">NAAT SHAREEF</div>
+        </div>
+
+        <div class="calligraphy-card">
+          <div class="calligraphy-image">
+            <img src="images/calligraphy4.png" alt="Wazaif">
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-title">WAZAIF</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrows-row">
+      <button class="nav-arrow" onclick="slideLeft()" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 12H4" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 18L4 12L10 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="spacer"></div>
+      <button class="nav-arrow" onclick="slideRight()" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 12H20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 6L20 12L14 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const cardsWrapper = document.getElementById('cardsWrapper');
+    const cards = document.querySelectorAll('.calligraphy-card');
+
+    function getVisibleCards() {
+      const w = window.innerWidth;
+      if (w <= 576) return 1;
+      if (w <= 992) return 2;
+      return 3;
+    }
+
+    function updateSlider() {
+      const visible = getVisibleCards();
+      const gap = parseInt(getComputedStyle(cardsWrapper).gap) || 24;
+      const cardWidth = cards[0].offsetWidth;
+      const offset = -(currentIndex * (cardWidth + gap));
+      cardsWrapper.style.transform = `translateX(${offset}px)`;
+    }
+
+    function slideLeft() {
+      const total = cards.length;
+      const visible = getVisibleCards();
+      const maxIndex = Math.max(0, total - visible);
+      currentIndex--;
+      if (currentIndex < 0) currentIndex = maxIndex;
+      updateSlider();
+    }
+
+    function slideRight() {
+      const total = cards.length;
+      const visible = getVisibleCards();
+      const maxIndex = Math.max(0, total - visible);
+      currentIndex++;
+      if (currentIndex > maxIndex) currentIndex = 0;
+      updateSlider();
+    }
+
+    window.addEventListener('resize', updateSlider);
+    window.addEventListener('load', () => setTimeout(updateSlider, 80));
+  </script>
+  
+  <!-- ========== CONTENT SECTION ========== -->
+  <section class="content" id="journey">
+    <h2>Blessings of Wazaif's</h2>
+    <p>
+      If one wishes to have Allah's distinguished blessings then one should recite Wazaif with devotion, love, fondness and regularity. According to Hadit Sharif, Allah likes those deeds which are done regularly without interruption. One who is loyal to Allah and his Prophet صلی اللہ علیہ وسلم will see miracles in all his matters (Inshallah). In this world and here after they will have a guarantee and security of the Holy Prophet صلی اللہ علیہ وسلم . They will have love of Holy Prophet صلی اللہ علیہ وسلم . Livelihood will rain down upon them. Impossible and difficult matters shall resolve Inshallah.
+    </p>
+    <img src="images/ornament.png" class="ornament" alt="Ornamental divider">
+  </section>
+
+  <section class="boss-mockup">
+    <section class="hero-section-mockup">
+      <div class="container-custom-mockup">
+        <div class="content-row-mockup">
+          
+          <!-- Left Content -->
+          <div class="left-content-mockup">
+            <h1 class="brand-title-mockup">Idreesia</h1>
+            <p class="brand-subtitle-mockup">
+              Want to start your spiritual journey?<br>
+              Share your moments with us. Follow us on Social Media
+            </p>
+            <div class="social-media-section-mockup">
+              <div class="social-icons-row-mockup">
+                <a href="#"><img src="images/whatsapp.png" alt="WhatsApp" class="social-icon-img"></a>
+                <a href="#"><img src="images/playstore.png" alt="Play Store" class="social-icon-img"></a>
+                <a href="#"><img src="images/app.png" alt="App" class="social-icon-img"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube" class="social-icon-img"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="right-content-mockup">
+            <div class="phones-showcase-mockup">
+              <div class="phone-mockup-mockup phone-left-mockup">
+                <img src="images/phone1.png" alt="Idreesia App Screen 1">
+              </div>
+              <div class="phone-mockup-mockup phone-center-mockup">
+                <img src="images/phone2.png" alt="Idreesia App Screen 2">
+              </div>
+              <div class="phone-mockup-mockup phone-right-mockup">
+                <img src="images/phone3.png" alt="Idreesia App Screen 3">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </section>
+
+   <section class="latest-message-section">
+        <div class="container">
+            <h2 class="section-title-latest-message">Latest Message</h2>
+
+            <div class="row message-grid-latest-message align-items-stretch">
+
+                <!-- Left Column -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="left-image-container-latest-message">
+                        <img src="images/mosque-moon.png" class="main-image-latest-message" alt="Mosque under a full moon">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-6">
+                    <div class="right-content-wrapper-latest-message">
+                        <img src="images/mosque-lights.png" alt="Mosque decorated with festive lights">
+                        <div class="news-list-latest-message">
+                            <div class="news-item-latest-message">
+                                <h3 class="news-title-latest-message">Mehfil 5 Safar-ul-Muzaffar ki Parhaiyan</h3>
+                                <p class="news-date-latest-message">27 Jul 2025 09:00 PM</p>
+                            </div>
+                            <div class="news-item-latest-message">
+                                <h3 class="news-title-latest-message">Today Taleem Shareef Played in 381 After Maghreb Prayer</h3>
+                                <p class="news-date-latest-message">27 Jul 2025 08:05 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Button -->
+            <div class="text-center">
+                <a href="#" class="btn btn-check-news-latest-message">Check Latest News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE JAVASCRIPT FIX -->
+    <script>
+        function matchHeights() {
+            // Check if we are on a large enough screen to apply this logic
+            if (window.innerWidth > 991) {
+                const leftContainer = document.querySelector('.left-image-container-latest-message');
+                const rightWrapper = document.querySelector('.right-content-wrapper-latest-message');
+
+                if (leftContainer && rightWrapper) {
+                    // Get the computed pixel height of the left container
+                    const leftHeight = leftContainer.offsetHeight;
+                    
+                    // Set the right wrapper's height to be 80% of the left's height
+                    const targetHeight = leftHeight * 0.8;
+                    rightWrapper.style.height = `${targetHeight}px`;
+                }
+            } else {
+                // On smaller screens, remove the inline style to let content flow naturally
+                const rightWrapper = document.querySelector('.right-content-wrapper-latest-message');
+                if (rightWrapper) {
+                    rightWrapper.style.height = 'auto';
+                }
+            }
+        }
+
+        // Run the function when the page is fully loaded
+        window.addEventListener('load', matchHeights);
+        // Re-run the function whenever the window is resized
+        window.addEventListener('resize', matchHeights);
+    </script>
+
+    <section class="directory-section">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <!-- Left Column: Text Content -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="directory-content">
+                        <h1 class="directory-heading">Mahafil Address Directory</h1>
+                        <p class="directory-description">
+                            Explore the official directory of all Mahafil. Find address, contact information, and timings for Mahafil in your city and country.
+                        </p>
+                        <a href="#" class="btn-connect">Connect With Your Mehfil</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Image -->
+                <div class="col-lg-6 hgh">
+                    <img src="images/directory-image.png" alt="People reading together in a gathering" class="directory-image ">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- FOOTER -->
+  <footer class="idreesia-footer">
+    <div class="footer-inner container py-5">
+
+      <div class="row g-4 align-items-start text-white">
+
+        <!-- Left logo -->
+        <div class="col-lg-3 col-md-4 col-12 text-center text-md-start">
+          <img src="images/logo.png" alt="Idreesia Logo" class="footer-logo img-fluid">
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+          <h5 class="footer-title">Contact</h5>
+          <p class="footer-text mb-1">061-111-111-381</p>
+          <p class="footer-text mb-0">
+            381-A Block Shah Rukn-e-Alam<br>
+            Colony, Near Thana Stop,<br>
+            Multan, Pakistan
+          </p>
+        </div>
+
+        <!-- Learn More -->
+         <div class="col-lg-6 col-md-4 col-sm-6 col-12">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <h5 class="footer-title">Learn More</h5>
+          <ul class="list-unstyled footer-links mb-0">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Media Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <h5 class="footer-title">Social Media</h5>
+          <div class="social-icons">
+            <a aria-label="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
+            <a aria-label="messenger" href="#"><i class="fab fa-facebook-messenger"></i></a>
+            <a aria-label="play" href="#"><i class="fab fa-google-play"></i></a>
+            <a aria-label="apple" href="#"><i class="fab fa-apple"></i></a>
+            <a aria-label="youtube" href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        </div>
+
+      </div> <!-- /.row -->
+    </div> <!-- /.footer-inner -->
+
+    <!-- bottom copyright -->
+    <div class="footer-bottom text-center py-3">
+      <div class="container algn">
+        <span>© 2025 Silsila Muhammadia Ameenia Idreesia All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const hero = document.querySelector('.hero');
+  const fadeLayer = document.querySelector('.fade-layer');
+
+
+  const images = [
+    'images/sujood.png',
+    'images/hero-badge.jpg',
+    'images/tasbeeh.png' // <- second image
+  ];
+
+  let cI = 0; // current index
+  setInterval(() => {
+    const nextIndex = (cI + 1) % images.length;
+
+    // Step 1: set new image on the fade layer
+    fadeLayer.style.backgroundImage = `url('${images[nextIndex]}')`;
+
+    // Step 2: fade in the layer
+    fadeLayer.style.opacity = 1;
+
+    // Step 3: after fade completes, update main background and hide the layer
+    setTimeout(() => {
+      hero.style.backgroundImage = `url('${images[nextIndex]}')`;
+      fadeLayer.style.opacity = 0;
+      cI = nextIndex;
+    }, 1000); // must match the CSS transition duration
+  }, 5000); // switch every 5 seconds
+</script>
+
+</body>
+</html>
