@@ -1,6 +1,7 @@
 # Company Website Project
 
 This repository contains the source code for the company website, developed to convert provided Figma designs into a fully responsive, ready-to-use website.
+Pages implemented: Landing page + Home page + Latest News + Taleemaat + Submit Parhaiyan.
 
 ## Project Overview
 
